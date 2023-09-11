@@ -6,6 +6,6 @@
     "outDir": "dist"
   },
   "files": [
-    "botcircuits/index.ts"
+    "src/index.ts"
   ]
 }
