@@ -1,6 +1,6 @@
 {
   "name": "botcircuits",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/botcircuits/projects/botcircuits-sdks/botcircuits-javascript-sdk.git"
+    "url": "git+ssh://git@github.com:botcircuits/botcircuits-node.git"
   },
   "author": "Tharanga Thennakoon",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/botcircuits/projects/botcircuits-sdks/botcircuits-javascript-sdk/issues"
+    "url": "https://github.com/botcircuits/botcircuits-node/issues"
   },
-  "homepage": "https://gitlab.com/botcircuits/projects/botcircuits-sdks/botcircuits-javascript-sdk#readme",
+  "homepage": "https://github.com/botcircuits/botcircuits-node#readme",
   "dependencies": {
     "typescript": "^5.2.2",
     "aws-amplify": "^5.3.10"
