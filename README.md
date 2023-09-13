@@ -1,13 +1,19 @@
 # BotCircuits Node API Library
 
-[![NPM version](https://img.shields.io/npm/v/botcircuits-sdk.svg)](https://npmjs.org/package/botcircuits-sdk)
+[![NPM version](https://img.shields.io/npm/v/botcircuits.svg)](https://npmjs.org/package/botcircuits)
+
+[BotCircuits](https://botcircuits.com/#demo) is a No-Code AI platform enables effortless creation of intelligent chatbots with human-like conversational capabilities.
+
+This library provides access to the BotCircuits REST API from TypeScript or JavaScript
+
+To learn how more about BotCircuits, check out our [Product Demo](https://botcircuits.com/#demo)
 
 ## Installation
 
 ```sh
-npm install --save botcircuits-sdk
+npm install --save botcircuits
 # or
-yarn add botcircuits-sdk
+yarn add botcircuits
 ```
 
 ## Usage
@@ -15,7 +21,7 @@ yarn add botcircuits-sdk
 The code below shows how to get started using the chat endpoint.
 
 ```js
-import { BotCircuitsClient } from "botcircuits-sdk";
+import { BotCircuitsClient } from "botcircuits";
 
 const botCircuitsClient = new BotCircuitsClient({
     appId: "my app id",
