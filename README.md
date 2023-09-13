@@ -23,18 +23,18 @@ The code below shows how to get started using the chat endpoint.
 ```js
 import { BotCircuitsClient } from "botcircuits";
 
-const botCircuitsClient = new BotCircuitsClient({
+const client = new BotCircuitsClient({
     appId: "my app id",
     apiKey: "my api key"
 });
 
 async function main() {
     const sessionId = "session-id"; // unique id
-    const subscription = botCircuitsClient.chat.subscribe(sessionId, response => {
+    const subscription = client.chat.subscribe(sessionId, response => {
         console.log(response);
     });
 
-    await botCircuitsClient.chat.publish({
+    await client.chat.publish({
         sessionId: sessionId,
         inputText: "hello"
     });
