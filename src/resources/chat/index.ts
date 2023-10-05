@@ -1,6 +1,6 @@
 import { customAlphabet } from "nanoid";
 import {Options} from "../../types";
-import {SubscriptionCallback, Request} from "./types";
+import {SubscriptionCallback, Request, SubscriptionErrorCallback} from "./types";
 
 const customNanoid = customAlphabet('1234567890abcdefghijklmnopqrstuvwxyz', 15)
 
@@ -31,7 +31,7 @@ export class ChatResource {
         throw Error("Not implemented")
     }
 
-    public subscribe(sessionId: string, callback: SubscriptionCallback): Subscription {
+    public subscribe(sessionId: string, callback: SubscriptionCallback, errorCallback?: SubscriptionErrorCallback): Subscription {
         throw Error("Not implemented")
     }
 
