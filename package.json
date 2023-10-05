@@ -1,6 +1,6 @@
 {
   "name": "botcircuits",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/botcircuits/botcircuits-node#readme",
   "dependencies": {
-    "typescript": "^5.2.2",
-    "aws-amplify": "^5.3.10"
+    "aws-amplify": "^5.3.10",
+    "nanoid": "^5.0.1",
+    "typescript": "^5.2.2"
   }
 }

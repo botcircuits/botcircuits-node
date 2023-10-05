@@ -4,7 +4,7 @@ import {graphqlOperation} from "aws-amplify";
 import {GRAPHQL_API, REGION} from "../../../../configs";
 import {Options} from "../../../../types";
 import {Request, SubscriptionCallback, SubscriptionErrorCallback} from "../../types";
-import {ChatEndpoint, Subscription} from "../../index";
+import {ChatResource, Subscription} from "../../index";
 
 Amplify.configure({
     "aws_appsync_region": REGION,
@@ -69,7 +69,7 @@ function subscribeBotMessage(
     });
 }
 
-export class ChatEndpointImpl extends ChatEndpoint {
+export class ChatResourceImpl extends ChatResource {
     constructor(options: Options) {
         super(options);
     }

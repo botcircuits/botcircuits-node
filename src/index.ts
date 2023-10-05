@@ -1,10 +1,10 @@
 import {Connection, ConnectionProtocol, Options} from "./types";
-import {ChatEndpoint} from "./endpoints/chat";
-import {ChatEndpointImpl as WebSocketChatEndpoint } from "./endpoints/chat/connectors/websocket";
+import {ChatResource} from "./resources/chat";
+import {ChatResourceImpl as WebSocketChatEndpoint } from "./resources/chat/connectors/websocket";
 
 const defaultConnection: Connection = { protocol: ConnectionProtocol.WEBSOCKET };
 
-function chatEndpointFactory(options: Options): ChatEndpoint {
+function chatEndpointFactory(options: Options): ChatResource {
     if (options.connection?.protocol === ConnectionProtocol.WEBSOCKET) {
         return new WebSocketChatEndpoint(options);
     } else {
@@ -14,7 +14,7 @@ function chatEndpointFactory(options: Options): ChatEndpoint {
 
 export class BotCircuitsClient {
     private options: Options;
-    private readonly _chat: ChatEndpoint;
+    private readonly _chat: ChatResource;
 
     constructor(options: Options) {
         // Assigning default values
@@ -32,7 +32,7 @@ export class BotCircuitsClient {
         this._chat = chatEndpointFactory(this.options);
     }
 
-    public get chat(): ChatEndpoint {
+    public get chat(): ChatResource {
         return this._chat
     }
 }

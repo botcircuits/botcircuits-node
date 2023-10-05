@@ -1,5 +1,8 @@
+import { customAlphabet } from "nanoid";
 import {Options} from "../../types";
 import {SubscriptionCallback, Request} from "./types";
+
+const customNanoid = customAlphabet('1234567890abcdefghijklmnopqrstuvwxyz', 15)
 
 export class Subscription {
     private _subscription;
@@ -13,11 +16,15 @@ export class Subscription {
     }
 }
 
-export class ChatEndpoint {
+export class ChatResource {
     protected options: Options;
 
     constructor(options: Options) {
         this.options = options;
+    }
+
+    public init(): string {
+        return customNanoid();
     }
 
     public async publish(request: Request): Promise<void> {
