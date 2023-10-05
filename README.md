@@ -29,7 +29,7 @@ const client = new BotCircuitsClient({
 });
 
 async function main() {
-    const sessionId = client.chat.init(); // unique id
+    const sessionId = client.chat.createSessionId(); // unique id
     const subscription = client.chat.subscribe(sessionId, response => {
         console.log(response);
     });

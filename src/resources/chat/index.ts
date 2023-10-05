@@ -23,7 +23,7 @@ export class ChatResource {
         this.options = options;
     }
 
-    public init(): string {
+    public createSessionId(): string {
         return customNanoid();
     }
 
