@@ -49,6 +49,7 @@
 }
 ```
 ### Publish Messages
+```
 {
   "query": "mutation Publish() {
           sendUserMessage(data: {DATA}, appId: {APP_ID}, sessionId: {SESSION_ID}) {
@@ -63,3 +64,4 @@
     "data": "{MESSAGE_PAYLOAD_JSON}"
   }
 }
+```
